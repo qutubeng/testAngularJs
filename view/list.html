@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en" ng-app="listApp">
+
+<head>
+    <title>Employee List Using AngularJS</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="">
+
+<div class="container hundred">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/view/register.html">Add employee</a></li>
+            <li><a href="/view/list.html">List Employee</a></li>
+        </ol>
+    </div>
+</div>
+
+<div ng-controller="ListController" class="container">
+    <input class="form-control" type="search" ng-model="nameOrAge" placeholder="Filter by name or age..." />
+    <table class="table table-striped">
+        <thead>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Company</th>
+        <th></th>
+        <th></th>
+        </thead>
+
+        <tbody ng-repeat="n in personName | filter: nameOrAge | orderBy: 'name' ">
+            <td> {{ n.name}} {{ n.lastname}} </td>
+            <td> {{ n.age}} </td>
+            <td> {{n.company_name}} </td>
+
+            <td> <button class="btn btn-danger" ng-click="RemoveItem(n.id)">Delete</button> </td>
+            <td> <button class="btn btn-warning" ng-click="EditUser(n.id)">Edit</button> </td>
+        </tbody>
+    </table>
+</div>
+<!--
+<div ng-controller="MyController2" class="container">
+    <input class="form-control" type="search" ng-model="nameOrAge" placeholder="Filter by name or age..." />
+    <table class="table table-striped">
+        <thead>
+        <th>Name</th>
+        <th>Age</th>
+        </thead>
+
+        <tbody ng-repeat="n in personName | filter: nameOrAge | orderBy: 'name' ">
+        <td> {{ n.name}}</td>
+        <td> {{ n.age}} </td>
+        </tbody>
+    </table>
+</div>
+--->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="../js/list.js"></script>
+</body>
+</html>
