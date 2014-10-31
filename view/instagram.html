@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Instagram Gallery</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/admin.css" rel="stylesheet">
+</head>
+<body ng-app="instagramApp">
+<div class="main">
+    <main-text></main-text>
+    <figure ng-repeat="pic in instagramImage.pics">
+        <img src="{{pic}}"/>
+    </figure>
+</div>
+<!--<div ng-controller="ctrl">-->
+
+<!--</div>-->
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src='/js/amplify.min.js'></script>
+<script src="/js/instagram.js"></script>
+
+</body>
+</html>
