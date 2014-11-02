@@ -9,7 +9,6 @@ $obj = new Instagram();
 $obj->$method($maxId);
 
 class Instagram {
-
     public function getInstagramData($maxId) {
         if($maxId != null) {
             $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=8369795.e8eb661.8546460ceb89437e9af2de1961452b57&max_id={$maxId}";

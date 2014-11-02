@@ -1,4 +1,5 @@
 var app = angular.module('instagramApp', []);
+
 app.directive('mainText', function() {
     var getData = function() {
         console.log("i m called");
