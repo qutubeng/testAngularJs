@@ -20,17 +20,3 @@ $id = $id->{'id'};
 
 $userController = new userController();
 $userController->deleteDataAction($id);
-
-/*
-if(isset($_POST['id'])) {
-	$id = $_POST['id'];
-	$userController = new userController();
-	$userController->deleteDataAction($id);
-}
-elseif(isset($_GET['id'])) {
-    $id = $_POST['id'];
-    $userController = new userController();
-    $userController->deleteDataAction($id);
-}
-
-*/

@@ -12,7 +12,6 @@ require_once $_SESSION['path'].'/model/Employee.php';
 
 class userController {
 	public function __construct() {
-	
 	}
 
 	public function getUserAction() {
@@ -27,18 +26,22 @@ class userController {
 		return $users;
 	}
 
-	public function processEditAction($id) {
+	public function processEditAction() {
 		$message = array('type' => 0, 'content' => '');
 		$employeeModel = new Employee();
-		
-		$datetime = date('Y-m-d H:i:s');
-		$data = array(
-			'name' => $_POST['name'],
-			'age' => $_POST['age'],
-			'company' => $_POST['company'],
-			'lastname' => $_POST['lastname'],
-			'update_date' => $datetime,
-		);
+
+        $datetime = date('Y-m-d H:i:s');
+        $getJsonData = file_get_contents("php://input");
+        $getJsonData = json_decode($getJsonData);
+
+        $id = $getJsonData->{'id'};
+        $data = array(
+            'name' => $getJsonData->{'name'},
+            'age' => $getJsonData->{'age'},
+            'company' => $getJsonData->{'company'},
+            'lastname' => $getJsonData->{'lastname'},
+            'insert_date' => $datetime,
+        );
 
 		$save = $employeeModel->updateData($data, $id);
 		

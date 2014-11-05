@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en" ng-app="listApp">
+<html lang="en" ng-app="indexApp">
 
 <head>
     <title>Employee List Using AngularJS</title>
@@ -14,60 +14,37 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/admin.css" rel="stylesheet">
 
 </head>
 
-<body class="">
-
-<div class="container hundred">
-    <div class="row">
-        <ol class="breadcrumb">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/view/register.html">Add employee</a></li>
-            <li><a href="/view/list.html">List Employee</a></li>
-        </ol>
-    </div>
-</div>
-
+<body>
 <div ng-controller="ListController" class="container">
+    <header-dir></header-dir>
+
     <input class="form-control" type="search" ng-model="nameOrAge" placeholder="Filter by name or age..." />
     <table class="table table-striped">
         <thead>
-        <th>Name</th>
+        <th class="name">Name</th>
         <th>Age</th>
         <th>Company</th>
         <th></th>
-        <th></th>
+        <!--<th></th>-->
         </thead>
 
-        <tbody ng-repeat="n in personName | filter: nameOrAge | orderBy: 'name' ">
-            <td> {{ n.name}} {{ n.lastname}} </td>
-            <td> {{ n.age}} </td>
-            <td> {{n.company_name}} </td>
-
-            <td> <button class="btn btn-danger" ng-click="RemoveItem(n.id)">Delete</button> </td>
-            <td> <button class="btn btn-warning" ng-click="EditUser(n.id)">Edit</button> </td>
+        <tbody ng-repeat="n in personName | orderBy: 'name' ">
+        <tr class="nameList" ng-click="EditUser(n.id)">
+            <td class="name" style="width: 30%"> {{ n.name}} {{ n.lastname}} </td>
+            <td style="width: 20%"> {{ n.age}} </td>
+            <td style="width: 30%"> {{n.company_name}} </td>
+            <td style="width: 20%" class="btn-td"> <button class="btn btn-danger" ng-click="RemoveItem(n.id)">Delete</button> </td>
+            <!--<td> <button class="btn btn-warning" ng-click="EditUser(n.id)">Edit</button> </td>-->
+        </tr>
         </tbody>
     </table>
 </div>
-<!--
-<div ng-controller="MyController2" class="container">
-    <input class="form-control" type="search" ng-model="nameOrAge" placeholder="Filter by name or age..." />
-    <table class="table table-striped">
-        <thead>
-        <th>Name</th>
-        <th>Age</th>
-        </thead>
-
-        <tbody ng-repeat="n in personName | filter: nameOrAge | orderBy: 'name' ">
-        <td> {{ n.name}}</td>
-        <td> {{ n.age}} </td>
-        </tbody>
-    </table>
-</div>
---->
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-<script src="../js/list.js"></script>
+<script src="../js/common.js"></script>
 </body>
 </html>

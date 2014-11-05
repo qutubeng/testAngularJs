@@ -3,6 +3,7 @@ body {
 }
 
 .main {
+    width: 100%;
     margin: 20px;
 }
 
@@ -14,3 +15,28 @@ img {
 figure {
     margin: 0px auto;
 }
+
+.fig {
+    margin-left: 10px;
+}
+
+/* mouse over link */
+tr.nameList {
+    cursor: pointer;
+}
+
+td, th {
+    text-align: center;
+}
+td.btn-td {
+    text-align: end;
+}
+td.name {
+    text-align: left;
+    vertical-align: middle;
+}
+table.table.table-striped {
+    background-color: floralwhite;
+}
+
+

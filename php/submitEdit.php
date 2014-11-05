@@ -11,6 +11,5 @@ if(!isset($_SESSION)) {
 require_once $_SESSION['path'].'/model/Database.php';
 require_once $_SESSION['path'].'/controller/userController.php';
 
-if(isset($_GET['id'])) $id = $_GET['id'];
 $userController = new userController();
-$userController->processEditAction($id);
+$userController->processEditAction();

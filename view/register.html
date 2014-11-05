@@ -1,6 +1,5 @@
 <!doctype html>
-
-<html lang="en" ng-app="registerApp">
+<html lang="en" ng-app="indexApp">
 <head>
     <meta charset="UTF-8">
     <title>Employee Registration</title>
@@ -9,53 +8,45 @@
 
 <body>
 
-<div class="container hundred">
-    <div class="row">
-        <ol class="breadcrumb">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/view/register.html">Add employee</a></li>
-            <li><a href="/view/list.html">List Employee</a></li>
-        </ol>
-    </div>
-</div>
-
 <div ng-controller="RegController" class="container">
-    <form novalidate class="form-register">
 
+    <header-dir></header-dir>
+
+    <form novalidate class="">
         <div class='alert alert-danger' ng-hide="ShowHide()"> <p align="center"> Submitting Error </p></div>
 
         <div class="form-group">
             <label>First Name</label>
-            <input type="text" class="form-control" ng-model="myForm.fname" placeholder="First Name" required>
+            <input type="text" class="form-control" ng-model="editController.fname" placeholder="First Name" required>
+        </div>
 
         <div class="form-group">
             <label>Last Name</label>
-            <input type="text" class="form-control" ng-model="myForm.lname" placeholder="Last Name" required>
+            <input type="text" class="form-control" ng-model="editController.lname" placeholder="Last Name" required>
         </div>
 
         <div class="form-group">
             <label>Employee Age</label>
-            <input type="number" class="form-control" ng-model="myForm.age" placeholder="Employee Age" min="18" max="60" required>
+            <input type="number" class="form-control" ng-model="editController.age" placeholder="Employee Age" min="18" max="60" required>
         </div>
 
         <div class="form-group" >
             <label>Company</label>
-            <select ng-model="myForm.company" class="form-control" required>
+            <select ng-model="editController.company" class="form-control" required>
                 <option value="">Select</option>
                 <option ng-repeat="c in company" value="{{c.id}}">{{c.company_name}}</option>
             </select>
         </div>
 
+        <div>
             <button ng-click="Save(myForm)" class="btn btn-lg btn-primary btn-block"><i class="fa fa-key"></i> Register me</button>
             <a class="btn btn-lg btn-default btn-block" href="/index.html"><i class="fa fa-times-circle"></i> Cancel</a>
-
         </div>
     </form>
-
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-<script src="../js/register.js"></script>
+<script src="../js/common.js"></script>
 
 </body>
 </html>

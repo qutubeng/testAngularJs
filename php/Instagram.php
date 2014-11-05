@@ -31,4 +31,3 @@ class Instagram {
         echo $data;
     }
 }
-//
