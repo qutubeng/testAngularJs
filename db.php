@@ -54,6 +54,7 @@ $result = "CREATE TABLE IF NOT EXISTS ". $table2 ." (
 if (mysqli_query($con, $result)) {
 	echo "TABLE created.";
 }
+
 else {
 	echo "Error in CREATE TABLE.";
 }
@@ -71,4 +72,3 @@ if (mysqli_query($con, $result)) {
 else {
 	echo "error in insertion";
 }
-?>
