@@ -14,8 +14,8 @@ class Instagram {
             $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=8369795.e8eb661.8546460ceb89437e9af2de1961452b57&max_id={$maxId}";
         }
         else {
-//            $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=8369795.e8eb661.8546460ceb89437e9af2de1961452b57";
-            $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=1549111720.1fb234f.e7a0a37eb2a547a4a8e4b4d384d673c5";
+            $url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=8369795.e8eb661.8546460ceb89437e9af2de1961452b57";
+            //$url = "https://api.instagram.com/v1/users/self/media/recent/?access_token=1549111720.1fb234f.e7a0a37eb2a547a4a8e4b4d384d673c5";
             //$url = "https://www.dropbox.com/sh/mp3qn15w7p0cm9l/AACZtdPxw8CqMTr5wJ_UsAOMa";
         }
 

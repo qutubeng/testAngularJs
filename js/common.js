@@ -5,7 +5,7 @@ app.controller('IndexController', function($scope, $http) {
         console.log("session started");
     });
 });
-app.directive('mainText', function() {
+app.directive('instagramPicture', function() {
     var getData = function() {
         console.log("i m called");
     };
