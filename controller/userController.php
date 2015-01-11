@@ -35,7 +35,8 @@ class userController {
         $getJsonData = json_decode($getJsonData);
 
         $id = $getJsonData->{'id'};
-        $data = array(
+
+		$data = array(
             'name' => $getJsonData->{'name'},
             'age' => $getJsonData->{'age'},
             'company' => $getJsonData->{'company'},
