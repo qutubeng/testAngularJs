@@ -80,7 +80,7 @@ app.directive('headerDir', function() {
         '<li><a href="/view/register.html">Add employee</a></li>' +
         '<li><a href="/view/list.html">List Employee</a></li>' +
         '<li><a href="/view/instagram.html">Instagram gallery</a></li>'+
-        '<li><a href="/view/directoryImages.html">Directory gallery</a></li>'+
+        //'<li><a href="/view/directoryImages.html">Directory gallery</a></li>'+
         '</ol>' +
         '</div>' +
         '</div>';
