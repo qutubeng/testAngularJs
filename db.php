@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Created by Qutub
+ * */
+
+
 $db_name = "simple";
 $table1 = "employee";
 $table2 = "company";
