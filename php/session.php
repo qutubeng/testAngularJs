@@ -8,5 +8,5 @@ if(!isset($_SESSION)) {
 		$_SESSION['path'] = $path;
 	}
 
-    echo $_SESSION['path'];
+    //echo $_SESSION['path'];
 }
