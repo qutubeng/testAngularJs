@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * Created by Qutub
+ * */
+
+
 $db_name = "simple";
 $table1 = "employee";
 $table2 = "company";
@@ -10,6 +15,7 @@ $user_name = "root";
 $passwrd = "";
 
 $con=mysqli_connect($host_name,$user_name,$passwrd);
+
 // Check connection
 if (mysqli_connect_errno()) {
 	echo "Failed to connect to MySQL: " . mysqli_connect_error();
