@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * project root path storing in session
+ */
+
 if(!isset($_SESSION)) {
 	session_start();
 	if(!isset($_SESSION['path'])) {
