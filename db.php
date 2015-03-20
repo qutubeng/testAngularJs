@@ -60,7 +60,7 @@
 	}
 
 	else {
-		echo "Error in CREATE TABLE.";
+		echo "Error in CREATING TABLE.";
 	}
 
 	$result = "INSERT INTO ". $table2 ."(`id`, `company_name`) VALUES
