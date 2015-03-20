@@ -8,7 +8,7 @@
 
 class xmlParser {
     public function __construct() {
-
+        // constructor
     }
 
     public function getWorkingDirectory() {
